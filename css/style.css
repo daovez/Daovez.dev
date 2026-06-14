@@ -157,6 +157,8 @@ nav .play-btn {
     z-index: 3;
 }
 
+/* DAOVEZ */
+
 .name-box {
     position: absolute;
     left: 120px;
@@ -186,7 +188,10 @@ nav .play-btn {
     margin: 12px 0;
 }
 
-.info-card {
+/* TARJETAS */
+
+.info-card,
+.contact-card {
     display: none;
     opacity: 0;
     position: absolute;
@@ -201,12 +206,14 @@ nav .play-btn {
     z-index: 10;
 }
 
-.info-card.activa {
+.info-card.activa,
+.contact-card.activa {
     display: block;
     opacity: 1;
 }
 
-.info-card h1 {
+.info-card h1,
+.contact-card h1 {
     font-family: "Space Grotesk", sans-serif;
     font-size: 2.5rem;
     line-height: .95;
@@ -214,13 +221,32 @@ nav .play-btn {
     font-weight: 500;
 }
 
-.info-card p {
+.info-card p,
+.contact-card p {
     color: rgba(255,255,255,.75);
     line-height: 1.7;
     font-size: .85rem;
 }
 
+.contact-links {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-links a {
+    color: #def71c;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.contact-links a:hover {
+    transform: translateX(8px);
+}
+
 /* PORTÁTIL PEQUEÑO */
+
 @media (max-width: 1400px) and (min-width: 1201px) {
     header {
         padding: 0 35px;
@@ -240,6 +266,7 @@ nav .play-btn {
 }
 
 /* TABLET */
+
 @media (min-width: 769px) and (max-width: 1200px) {
     body {
         padding: 25px;
@@ -253,13 +280,9 @@ nav .play-btn {
 
     .sidebar {
         width: 90px;
-        height: auto;
-        flex-direction: column;
     }
 
     .sidebar-links {
-        display: flex;
-        flex-direction: column;
         gap: 35px;
     }
 
@@ -269,16 +292,11 @@ nav .play-btn {
     }
 
     nav {
-        flex-direction: row;
         gap: 18px;
     }
 
     nav a {
         font-size: .78rem;
-    }
-
-    .hero-effect {
-        height: calc(100% - 90px);
     }
 
     .person {
@@ -304,7 +322,9 @@ nav .play-btn {
     }
 
     .info-card,
-    .info-card.activa {
+    .info-card.activa,
+    .contact-card,
+    .contact-card.activa {
         width: 350px !important;
         right: 30px !important;
         left: auto !important;
@@ -313,17 +333,21 @@ nav .play-btn {
         transform: none !important;
     }
 
-    .info-card h1 {
+    .info-card h1,
+    .contact-card h1 {
         font-size: 2rem !important;
     }
 
-    .info-card p {
+    .info-card p,
+    .contact-card p,
+    .contact-links a {
         font-size: .75rem !important;
         line-height: 1.55 !important;
     }
 }
 
 /* MÓVIL */
+
 @media (max-width: 768px) {
     body {
         padding: 20px;
@@ -336,7 +360,6 @@ nav .play-btn {
     }
 
     .sidebar {
-        display: flex;
         width: 100%;
         height: auto;
         flex-direction: column;
@@ -415,7 +438,9 @@ nav .play-btn {
     }
 
     .info-card,
-    .info-card.activa {
+    .info-card.activa,
+    .contact-card,
+    .contact-card.activa {
         width: calc(100% - 40px) !important;
         max-width: none !important;
         left: 20px !important;
@@ -425,13 +450,16 @@ nav .play-btn {
         padding: 18px !important;
     }
 
-    .info-card h1 {
+    .info-card h1,
+    .contact-card h1 {
         font-size: 1.7rem !important;
         line-height: 1 !important;
         margin-bottom: 15px !important;
     }
 
-    .info-card p {
+    .info-card p,
+    .contact-card p,
+    .contact-links a {
         font-size: .78rem !important;
         line-height: 1.45 !important;
     }

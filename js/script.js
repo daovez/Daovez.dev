@@ -42,16 +42,36 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-/* BOTÓN SOBRE MÍ */
+/* TARJETAS DEL MENÚ */
 
 document.addEventListener("DOMContentLoaded", function () {
     const btnSobreMi = document.getElementById("btn-sobre-mi");
+    const btnContacto = document.getElementById("btn-contacto");
+
     const infoCard = document.querySelector(".info-card");
+    const contactCard = document.querySelector(".contact-card");
 
     if (btnSobreMi && infoCard) {
         btnSobreMi.addEventListener("click", function (e) {
             e.preventDefault();
+
             infoCard.classList.toggle("activa");
+
+            if (contactCard) {
+                contactCard.classList.remove("activa");
+            }
+        });
+    }
+
+    if (btnContacto && contactCard) {
+        btnContacto.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            contactCard.classList.toggle("activa");
+
+            if (infoCard) {
+                infoCard.classList.remove("activa");
+            }
         });
     }
 });

@@ -120,7 +120,20 @@ nav a:hover {
     color: #def71c;
     transform: scale(1.1);
 }
+nav .play-btn {
+    background: #def71c;
+    color: #000;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+}
 
+nav .play-btn:hover {
+    background: #def71c;
+    color: #000;
+    transform: scale(1.1);
+
+}
 .search {
     font-size: 1.2rem;
     font-weight: 700;
@@ -449,5 +462,29 @@ nav a:hover {
         flex-direction: row;
         gap: 25px;
     }
+}
+/* BOTÓN VIDEOJUEGO */
+
+.play-btn{
+    display:inline-block;
+
+    padding:12px 24px;
+
+    background:#def71c;
+    color:#000;
+
+    font-weight:700;
+
+    border-radius:30px;
+
+    transition:all .3s ease;
+}
+
+.play-btn:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 15px #def71c,
+        0 0 30px #def71c;
 }
 }

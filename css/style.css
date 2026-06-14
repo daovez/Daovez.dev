@@ -96,7 +96,7 @@ header {
 }
 
 .logo h2 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: -1px;
@@ -182,14 +182,12 @@ nav .play-btn:hover {
     height: 100%;
     display: block;
     object-fit: cover;
-
     filter: grayscale(100%) contrast(1.08);
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-
     background:
         linear-gradient(
             90deg,
@@ -224,7 +222,7 @@ nav .play-btn:hover {
 
 /* Cuando NO hay ratón */
 .info-card {
-    opacity: 0.05;
+    opacity: 0.02;
 }
 
 /* Cuando pasas el ratón */
@@ -243,8 +241,8 @@ nav .play-btn:hover {
 }
 
 .info-card h1 {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 3rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2.5rem;
     line-height: .95;
     margin: 18px 0;
 
@@ -298,17 +296,17 @@ nav .play-btn:hover {
     transform: translateY(0);
     filter: blur(0);
 }
-.name-box h2 {
-    font-family: "Ubuntu", sans-serif;
-    font-size: 3.2rem;
+.name-box h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 4rem;
     font-weight: 300;
-    color: #ffffff;
+    color: #def71c;
     letter-spacing: -2px;
 }
 
 .name-box p {
     margin-top: 9px;
-    font-size: .9rem;
+    font-size: 9rem;
     letter-spacing: 1px;
     color: #ffffff;
 }
@@ -487,4 +485,5 @@ nav .play-btn:hover {
         0 0 15px #def71c,
         0 0 30px #def71c;
 }
+
 }

@@ -20,4 +20,19 @@ if (person && card) {
     card.addEventListener("mouseleave", () => {
         person.style.transform = "translateX(-50%) translate(0, 0)";
     });
+    let palabra = "";
+
+document.addEventListener("keydown", (e) => {
+
+    palabra += e.key.toUpperCase();
+
+    if (palabra.length > 4) {
+        palabra = palabra.slice(-4);
+    }
+
+    if (palabra === "PLAY") {
+        document.getElementById("secret-game").style.display = "block";
+    }
+
+});
 }

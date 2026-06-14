@@ -20,10 +20,13 @@ if (person && card) {
     card.addEventListener("mouseleave", () => {
         person.style.transform = "translateX(-50%) translate(0, 0)";
     });
-    let palabra = "";
+}
+
+/* EASTER EGG PLAY */
+
+let palabra = "";
 
 document.addEventListener("keydown", (e) => {
-
     palabra += e.key.toUpperCase();
 
     if (palabra.length > 4) {
@@ -31,8 +34,24 @@ document.addEventListener("keydown", (e) => {
     }
 
     if (palabra === "PLAY") {
-        document.getElementById("secret-game").style.display = "block";
-    }
+        const secretGame = document.getElementById("secret-game");
 
+        if (secretGame) {
+            secretGame.style.display = "block";
+        }
+    }
 });
-}
+
+/* BOTÓN SOBRE MÍ */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btnSobreMi = document.getElementById("btn-sobre-mi");
+    const infoCard = document.querySelector(".info-card");
+
+    if (btnSobreMi && infoCard) {
+        btnSobreMi.addEventListener("click", function (e) {
+            e.preventDefault();
+            infoCard.classList.toggle("activa");
+        });
+    }
+});
